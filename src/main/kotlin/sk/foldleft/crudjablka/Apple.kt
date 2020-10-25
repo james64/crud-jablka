@@ -7,6 +7,9 @@ import javax.persistence.Id
 
 @Entity
 class Apple(var color: String, var size: Int) {
+
+  constructor():this("", 0) { }
+
   @Id
   @GeneratedValue(strategy = GenerationType.IDENTITY)
   var id: Long? = null
